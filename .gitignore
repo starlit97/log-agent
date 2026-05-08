@@ -19,3 +19,18 @@ dist/
 build/
 __pycache__/
 *.pyc
+
+# Real data — NEVER commit
+data/
+data_real/
+*.xlsx
+*.xls
+*.csv
+!tests/fixtures/*.xlsx
+!tests/fixtures/*.csv
+!data/synthetic/**
+
+# LLM outputs / cache
+.llm_cache/
+outputs/
+reports/
