@@ -19,4 +19,20 @@ PoC 단계 — v0 (LLM-only) 진행 중. 단계별 계획은 [docs/roadmap.md](d
 
 ## 셋업
 
-v0 스캐폴드 작업 진행 예정. 추후 갱신.
+요구 환경: Python 3.11.
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install -e ".[dev]"
+cp .env.example .env                # 실 값은 로컬에서만 채우고 절대 commit 금지
+```
+
+검증:
+
+```bash
+pytest
+ruff check src/
+```
+
+자동 모드 / 데모 UI 실행은 후속 이슈에서 구현 후 추가됩니다.
